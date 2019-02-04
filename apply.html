@@ -9,11 +9,62 @@
 </head>
 <body>
         <header>
-            <h1>This is the application</h1>
             <a href="./index.html">Home Page</a>
         </header>
+       <h1>This is the application</h1>
         <main>
-            
+            <h2>Please Fill Out</h2>
+            <form id="application-for-circus">
+                <section>
+                    <p>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name">
+                    </p>
+                    <p>
+                        <label for="position">Positions available:</label>
+                        <select id="position" name="position">
+                            <option hidden disabled selected>Choose your Position</option>
+                            <option value="lion-tamer">Lion Tamer</option>
+                            <option value="sword-swallower">Sword Swallower</option>
+                            <option value="tightrope-walker">Tightrope Walker</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="allergy">Are you allergic to peanuts?</label>
+                        <span>0</span>
+                        <input type="range" name="allergy" id="allergy" min="0" max="10" step=".5">
+                        <span>10</span>
+                    </p>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <legend>Do you like elephants?</legend>
+                        <label for="yes">yes</label>
+                        <input type="radio" name="elephants" id="yes" value="yes">
+
+                        <label for="no">no</label>
+                        <input type="radio" name="elephants" id="no" value="no"> 
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Favorite Tiger Names:</legend>
+                        <label for="tony">Tony</label>
+                        <input type="checkbox" name="tiger" id="tony" value="tony">
+                        <label for="tigger">Tigger</label>
+                        <input type="checkbox" name="tiger" id="tigger" value="tigger">
+                        <label for="sally">Sally</label>
+                        <input type="checkbox" name="tiger" id="sally" value="sally">
+                        <label for="frank">Frank</label>
+                        <input type="checkbox" name="tiger" id="frank" value="frank">
+                    </fieldset>
+                </section>                
+
+                <section>
+                    <button id="submit">Submit</button>
+                </section>
+                
+            </form>
 
         </main>
         <footer>
