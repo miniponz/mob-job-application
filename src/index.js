@@ -29,9 +29,10 @@ circusForm.addEventListener('submit', function(event) {
         tigerName: tigerNames
     };
 
-    window.location = 'thanks.html';
+    //window.location = 'thanks.html';
 
-    const serialize = JSON.stringify('applicant');
+    const serialize = JSON.stringify(applicant);
+    console.log(serialize);
 
 });
 
