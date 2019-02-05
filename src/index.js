@@ -14,14 +14,15 @@ allergy.addEventListener('change', function() {
 
 circusForm.addEventListener('submit', function(event) {
     event.preventDefault();
-
     const tigerNames = [];
+
     for(let index = 0; index < circusForm.tiger.length; index++) {
         const name = circusForm.tiger[index];
         if(name.checked) {
             tigerNames[index] = name.value;
         }
     }
+    
     const applicant = {
         name: userName.value,
         position: jobPosition.value,
@@ -29,10 +30,12 @@ circusForm.addEventListener('submit', function(event) {
         tigerName: tigerNames
     };
 
-    //window.location = 'thanks.html';
+    window.location = 'thanks.html';
 
     const serialize = JSON.stringify(applicant);
-    console.log(serialize);
+    //turn applicant object into JSON format
+    window.localStorage.setItem('applicant', serialize);
+    //send JSON version of applicant object to local storage.
 
 });
 
