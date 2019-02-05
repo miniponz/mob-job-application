@@ -28,9 +28,10 @@ circusForm.addEventListener('submit', function(event) {
         allergy: allergy.value,
         tigerName: tigerNames
     };
-    //console.log(applicant);
 
     window.location = 'thanks.html';
+
+    const serialize = JSON.stringify('applicant');
 
 });
 
