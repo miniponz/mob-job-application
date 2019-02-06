@@ -3,8 +3,8 @@ const userName = document.getElementById('name');
 const jobPosition = document.getElementById('position');
 const allergy = document.getElementById('allergy');
 const allergySpan = document.getElementById('allergy-slider');
-const elephantsYes = document.getElementById('yes');
-const elephantsNo = document.getElementById('no');
+//const elephantsYes = document.getElementById('yes');
+//const elephantsNo = document.getElementById('no');
 
 
 
@@ -23,22 +23,22 @@ circusForm.addEventListener('submit', function(event) {
         }
     }
 
-    var elephants;
+    /*var elephants;
     if(elephantsYes.checked) {
         elephants = elephantsYes.value;
     }
     else if(elephantsNo.checked) {
         elephants = elephantsNo.value;
-    }
+    } 
   
-    console.log(elephants);
+    console.log(elephants);*/
 
     const applicant = {
         name: userName.value,
         position: jobPosition.value,
         allergy: allergy.value,
         tigerName: tigerNames,
-        elephants: elephants.value
+        //elephants: elephants.value
     };
 
     window.location = 'thanks.html';

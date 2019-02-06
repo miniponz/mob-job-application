@@ -14,3 +14,4 @@ position.textContent = hydratedApplicant.position;
 allergy.textContent = hydratedApplicant.allergy;
 tigerNames.textContent = hydratedApplicant.tigerName.join(' ');
 elephants.textContent = hydratedApplicant.elephants;
+
