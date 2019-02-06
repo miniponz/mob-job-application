@@ -5,7 +5,7 @@ const allergy = document.getElementById('allergy');
 const allergySpan = document.getElementById('allergy-slider');
 //const elephantsYes = document.getElementById('yes');
 //const elephantsNo = document.getElementById('no');
-
+let applicants = [];
 
 
 allergy.addEventListener('change', function() {
@@ -41,13 +41,23 @@ circusForm.addEventListener('submit', function(event) {
         //elephants: elephants.value
     };
 
-    window.location = 'thanks.html';
+    let applicants = [];
+    const jsonString = window.localStorage.getItem('applicants');
+    if(jsonString) {
+        applicants = JSON.parse(jsonString);
+    }
 
-    const serialize = JSON.stringify(applicant);
-    //turn applicant object into JSON format
-    window.localStorage.setItem('applicant', serialize);
+    const serialize = JSON.stringify(applicants);
+    //turn applicant object into JSON format. Is still an object.
+    window.localStorage.setItem('applicants', serialize);
     //send JSON version of applicant object to local storage.
+    
+    applicants.push(applicant);
+    console.log(applicants);
 
+
+    
+    //window.location = 'thanks.html';
 });
 
 
