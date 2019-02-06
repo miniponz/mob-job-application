@@ -4,14 +4,24 @@ const allergy = document.getElementById('allergy');
 const tigerNames = document.getElementById('tiger-names');
 const elephants = document.getElementById('elephants');
 
-const json = window.localStorage.getItem('applicant');
-const hydratedApplicant = JSON.parse(json);
+const jsonString = window.localStorage.getItem('applicants');
 
-console.log(hydratedApplicant);
+let applicant = null;
+if(jsonString){
+    const applicants = JSON.parse(jsonString);
+    applicant = applicants[applicants.length - 1];
+}
+else {
+    window.location = '/';
+}
 
-name.textContent = hydratedApplicant.name;
-position.textContent = hydratedApplicant.position;
-allergy.textContent = hydratedApplicant.allergy;
-tigerNames.textContent = hydratedApplicant.tigerName.join(' ');
-elephants.textContent = hydratedApplicant.elephants;
+
+
+
+
+name.textContent = applicant.name;
+position.textContent = applicant.position;
+allergy.textContent = applicant.allergy;
+tigerNames.textContent = applicant.tigerName.join(' ');
+elephants.textContent = applicant.elephants;
 

@@ -5,7 +5,6 @@ const allergy = document.getElementById('allergy');
 const allergySpan = document.getElementById('allergy-slider');
 //const elephantsYes = document.getElementById('yes');
 //const elephantsNo = document.getElementById('no');
-let applicants = [];
 
 
 allergy.addEventListener('change', function() {
@@ -46,13 +45,13 @@ circusForm.addEventListener('submit', function(event) {
     if(jsonString) {
         applicants = JSON.parse(jsonString);
     }
+    applicants.push(applicant);
 
     const serialize = JSON.stringify(applicants);
     //turn applicant object into JSON format. Is still an object.
     window.localStorage.setItem('applicants', serialize);
     //send JSON version of applicant object to local storage.
     
-    applicants.push(applicant);
     console.log(applicants);
 
 
@@ -60,4 +59,4 @@ circusForm.addEventListener('submit', function(event) {
     //window.location = 'thanks.html';
 });
 
-
+//we will need a for loop with applicants.length to cycle through and fill the table. 
