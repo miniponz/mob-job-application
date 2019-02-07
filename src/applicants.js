@@ -16,11 +16,11 @@ for(let index = 0; index < applicants.length; index++) {
 
     const tdName = document.createElement('td');
     const link = document.createElement('a'); // created link element
+    tr.appendChild(tdName);
     tdName.appendChild(link);
     link.textContent = applicant.name; //added text to our link 
     link.href = 'applicant-detail.html?name=' + encodeURIComponent(applicant.name); // setting href attribute on our link to the applicant-detail.html page and adding a query string (starts '?name=') with a key of name and value of string name.
     //use encodeURIComponent a)escapes characters that can't be in a URL and adds name to URL
-    tr.appendChild(tdName);
 
 
     const tdPosition = document.createElement('td');

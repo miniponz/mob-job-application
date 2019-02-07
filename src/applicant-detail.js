@@ -31,8 +31,7 @@ if(nameToFind) {
             break;
         }
     }
-}
-else {  
+} else {  
     applicant = applicants[applicants.length - 1];
 }
 
@@ -40,6 +39,6 @@ else {
 name.textContent = applicant.name;
 position.textContent = applicant.position;
 allergy.textContent = applicant.allergy;
-tigerNames.textContent = applicant.tigerName.join(', ');
+tigerNames.textContent = applicant.tigerName.join(' ');
 elephants.textContent = applicant.elephants;
 
