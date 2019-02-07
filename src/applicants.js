@@ -15,8 +15,13 @@ for(let index = 0; index < applicants.length; index++) {
     tbody.appendChild(tr);
 
     const tdName = document.createElement('td');
-    tdName.textContent = applicant.name;
+    const link = document.createElement('a');
+    tdName.appendChild(link);
+    link.textContent = applicant.name;
+    link.href = 'applicant-detail.html?name=' + encodeURIComponent(applicant.name);
+    //use encodeURIComponent a)escapes characters that can't be in a URL
     tr.appendChild(tdName);
+
 
     const tdPosition = document.createElement('td');
     tdPosition.textContent = applicant.position;
@@ -30,7 +35,5 @@ for(let index = 0; index < applicants.length; index++) {
     tdTigerNames.textContent = applicant.tigerName.join(' ');
     tr.appendChild(tdTigerNames);
 
-
-    
     
 }
