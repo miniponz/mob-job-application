@@ -52,11 +52,8 @@ circusForm.addEventListener('submit', function(event) {
     window.localStorage.setItem('applicants', serialize);
     //send JSON version of applicant object to local storage.
     
-    console.log(applicants);
-
-
     
-    //window.location = 'thanks.html';
+    window.location = 'thanks.html';
 });
 
 //we will need a for loop with applicants.length to cycle through and fill the table. 
