@@ -5,3 +5,10 @@
 table {
     margin: auto;
 }
+
+tr, td {
+    padding-left: 9px;
+    padding-right: 9px;
+    border: solid black 1px;
+}
+
