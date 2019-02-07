@@ -16,12 +16,14 @@ else {
 }
 
 const searchParam = new URLSearchParams(window.location.search);
+//new insance of URLSearchParams object and passing it query string 'window.location.search'
 //looks for key, gives value but returns what was clicked from the table.
 const nameToFind = searchParam.get('name'); 
+//uses 'get()' method to find the 'name' property within our searchparams.
 
 if(nameToFind) {
     for(let index = 0; index < applicants.length; index++){
-        let currentApplicant = applicants[index];
+        let currentApplicant = applicants[index]; // sets currentApplicant to be one of the things in the array.
         
         if(currentApplicant.name === nameToFind){
             applicant = currentApplicant;
@@ -29,11 +31,9 @@ if(nameToFind) {
             break;
         }
     }
-        
 }
-else {
+else {  
     applicant = applicants[applicants.length - 1];
-    console.log(applicant);
 }
 
 
